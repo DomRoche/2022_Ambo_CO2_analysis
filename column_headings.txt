@@ -1,0 +1,14 @@
+columnHeading	Explanation
+-------------	-----------
+
+fishID		Identity of each fish: 1-36 (control group), 37-76 (high CO2 group)
+trial		Trial number (1 to 4)
+tank		ID of the experimental arena/tank
+group		Experimental group: control (low CO2) and CO2 (high CO2)
+treatment	Before or after high CO2 exposure for the CO2 group and sham exposure for the control group
+SL		Standard length (mm)
+activity	Distance covered per minute after emergence (mm)
+shelter		Time spent in the vicinity of the shelter [zone X in Fig. 1] (s)
+thigmotaxis	Time spent within 3 cm [approximately 1 BL] of the arena walls (s)
+novel		Latency to approach the novel object (within 5 cm) (s)
+emergT		Time after the start of the trial at which the fish’s entire body first exited the shelter (s)
