@@ -1,3 +1,7 @@
+
+
+#install.packages("cmdstanr", repos = c("https://mc-stan.org/r-packages/", getOption("repos")))
+install.packages("Rtools40")
 # packages
 library(lme4)
 library(pander)
@@ -16,6 +20,7 @@ library(ggdist)
 library(gghalves)        
 library(patchwork) 
 library(rptR)
+library(Rtools40)
 check_cmdstan_toolchain(fix = TRUE, quiet = TRUE)
 
 # loading functions
