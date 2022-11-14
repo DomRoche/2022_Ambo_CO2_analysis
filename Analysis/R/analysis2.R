@@ -60,6 +60,15 @@ comp_rpt <- function(treat, cont){
   quant
 }
 
+# function to get CVp
+
+CVp <- function(est, lower, upper){
+  vect <- c(est, lower, upper)
+  vect2 <- sqrt(exp(vect) - 1)
+  names(vect2) <- c("est", "lower", "upper")
+  vect2
+}
+
 
 # data
 # data
@@ -191,6 +200,24 @@ model_shelter <- readRDS(here("Dom_analysis", "model_shelter.Rds"))
 model_thigmotaxis <- readRDS(here("Dom_analysis", "model_thigmotaxis.Rds"))
 model_novel <- readRDS(here("Dom_analysis", "model_novel.Rds"))
 model_emergT <- readRDS(here("Dom_analysis", "model_emergT.Rds"))
+
+
+# CVp - variation in predictability
+summary(model_activity)
+round(CVp(0.50, 0.33, 0.69), 3)
+
+summary(model_shelter)
+round(CVp(0.26, 0.04, 0.47), 3)
+
+summary(model_thigmotaxis)
+round(CVp(0.26, 0.04, 0.47), 3)
+
+summary(model_novel)
+round(CVp(0.28, 0.03, 0.50), 3)
+
+summary(model_emergT)
+round(CVp(0.45, 0.25, 0.66), 3)
+
 
 # test
 #model_shelter <- repair_stanfit_names(model_shelter)
